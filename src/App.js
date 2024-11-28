@@ -15,7 +15,7 @@ function App() {
     addMessage('user', userInput);
 
     // Show a loading indicator
-    addMessage('bot', 'Thinking...');
+    addMessage('bot', 'Araştırıyorum...');
 
     try {
       const response = await fetch('https://vbejdnajxe.execute-api.us-east-2.amazonaws.com/prod/chat', {
@@ -47,7 +47,7 @@ function App() {
       setMessages((msgs) =>
         msgs.map((msg, index) =>
           index === msgs.length - 1
-            ? { ...msg, text: 'Sorry, something went wrong.' }
+            ? { ...msg, text: 'Lütfen tekrar deneyin.' }
             : msg
         )
       );
