@@ -19,6 +19,20 @@ body {
   overflow-y: auto;
 }
 
+.message-content pre {
+  background-color: #f6f8fa;
+  padding: 12px;
+  border-radius: 6px;
+  overflow: auto;
+}
+
+.message-content code {
+  background-color: #f6f8fa;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+}
+
 .message {
   display: flex;
   margin-bottom: 15px;
