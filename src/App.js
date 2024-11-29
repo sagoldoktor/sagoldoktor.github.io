@@ -4,6 +4,7 @@ import { ChatInterface } from 'llmui';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import theme from './theme'; // We'll create a theme in Step 3
+import CustomMessage from './CustomMessage';
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -70,6 +71,7 @@ function App() {
         disableSend={false}
         placeholder="Mesajınızı yazın..."
         user={{ id: 'user' }}
+        renderMessage={(message) => <CustomMessage message={message} />}
       />
     </ThemeProvider>
   );
