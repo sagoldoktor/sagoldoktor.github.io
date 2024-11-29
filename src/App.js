@@ -45,10 +45,10 @@ function App() {
 
   return (
     <div className="app">
+      <header className="chat-header">
+        <h1>Sağol Doktor</h1>
+      </header>
       <div className="chat-container">
-        <header className="chat-header">
-          <h1>Sağol Doktor</h1>
-        </header>
         <ChatWindow messages={messages} />
         <Input onSend={handleSend} />
         <ScrollToTop />
