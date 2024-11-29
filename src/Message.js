@@ -1,5 +1,7 @@
 // src/Message.js
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import './App.css';
 
 function Message({ sender, text }) {
@@ -8,7 +10,7 @@ function Message({ sender, text }) {
   return (
     <div className={`message ${isUser ? 'user' : 'assistant'}`}>
       <div className="message-content">
-        {text}
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{text}</ReactMarkdown>
       </div>
     </div>
   );
