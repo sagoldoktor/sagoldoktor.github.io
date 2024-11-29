@@ -34,7 +34,7 @@ function App() {
       setMessages((msgs) =>
         msgs.map((msg, index) =>
           index === msgs.length - 1
-            ? { ...msg, text: 'Sorry, something went wrong.' }
+            ? { ...msg, text: 'Özür dilerim, hata oldu...' }
             : msg
         )
       );
@@ -46,7 +46,7 @@ function App() {
       <CssBaseline />
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6">Medical Chat Assistant</Typography>
+          <Typography variant="h6">Sağol Doktor</Typography>
         </Toolbar>
       </AppBar>
       <Box display="flex" flexDirection="column" height="calc(100vh - 64px)">
