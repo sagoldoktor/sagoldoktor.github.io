@@ -47,7 +47,7 @@ function App() {
       setMessages((msgs) =>
         msgs.map((msg, index) =>
           index === msgs.length - 1
-            ? { ...msg, text: 'Lütfen tekrar denin.' }
+            ? { ...msg, text: 'Lütfen tekrar deneyin.' }
             : msg
         )
       );
