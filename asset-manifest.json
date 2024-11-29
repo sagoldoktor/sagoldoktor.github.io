@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sagoldoktor.github.io/static/css/main.389d26c0.css",
-    "main.js": "/sagoldoktor.github.io/static/js/main.e04726cc.js",
+    "main.css": "/sagoldoktor.github.io/static/css/main.e6c13ad2.css",
+    "main.js": "/sagoldoktor.github.io/static/js/main.2c2c11b2.js",
     "static/js/453.477fda6e.chunk.js": "/sagoldoktor.github.io/static/js/453.477fda6e.chunk.js",
     "index.html": "/sagoldoktor.github.io/index.html",
-    "main.389d26c0.css.map": "/sagoldoktor.github.io/static/css/main.389d26c0.css.map",
-    "main.e04726cc.js.map": "/sagoldoktor.github.io/static/js/main.e04726cc.js.map",
+    "main.e6c13ad2.css.map": "/sagoldoktor.github.io/static/css/main.e6c13ad2.css.map",
+    "main.2c2c11b2.js.map": "/sagoldoktor.github.io/static/js/main.2c2c11b2.js.map",
     "453.477fda6e.chunk.js.map": "/sagoldoktor.github.io/static/js/453.477fda6e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.389d26c0.css",
-    "static/js/main.e04726cc.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.2c2c11b2.js"
   ]
 }
