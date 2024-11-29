@@ -16,7 +16,7 @@ function Input({ onSend }) {
     <Paper component="form" onSubmit={handleSubmit} sx={{ p: '4px', display: 'flex' }}>
       <TextField
         variant="standard"
-        placeholder="Type your message..."
+        placeholder="Mesajınızı girin..."
         value={text}
         onChange={(e) => setText(e.target.value)}
         fullWidth
