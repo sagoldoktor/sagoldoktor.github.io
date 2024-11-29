@@ -92,3 +92,23 @@ body {
 .input-form button:hover {
   background-color: #0056b3;
 }
+
+/* For smaller screens */
+@media (max-width: 600px) {
+  .message-content {
+    max-width: 80%;
+  }
+
+  .input-form {
+    flex-direction: column;
+  }
+
+  .input-form input {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .input-form button {
+    width: 100%;
+  }
+}
