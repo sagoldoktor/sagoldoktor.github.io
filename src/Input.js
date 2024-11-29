@@ -1,6 +1,6 @@
+// src/Input.js
 import React, { useState } from 'react';
-import { TextField, IconButton, Paper } from '@mui/material';
-import SendIcon from '@mui/icons-material/Send';
+import './App.css';
 
 function Input({ onSend }) {
   const [text, setText] = useState('');
@@ -13,20 +13,15 @@ function Input({ onSend }) {
   };
 
   return (
-    <Paper component="form" onSubmit={handleSubmit} sx={{ p: '4px', display: 'flex' }}>
-      <TextField
-        variant="standard"
-        placeholder="Mesajınızı girin..."
+    <form onSubmit={handleSubmit} className="input-form">
+      <input
+        type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        fullWidth
-        InputProps={{ disableUnderline: true }}
-        sx={{ ml: 1 }}
+        placeholder="Type your message..."
       />
-      <IconButton type="submit" color="primary">
-        <SendIcon />
-      </IconButton>
-    </Paper>
+      <button type="submit">Send</button>
+    </form>
   );
 }
 
