@@ -1,6 +1,7 @@
 // src/Input.js
 import React, { useState } from 'react';
 import {IconButton} from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
 import './App.css';
 
 function Input({ onSend }) {
