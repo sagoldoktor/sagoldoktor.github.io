@@ -24,7 +24,9 @@ function CustomMessage({ message }) {
         bgcolor={isUser ? 'primary.light' : 'grey.200'}
         maxWidth="70%"
       >
-        <Typography variant="body1">{message.content}</Typography>
+        {message.content && (
+          <Typography variant="body1">{message.content}</Typography>
+        )}
       </Box>
     </Box>
   );
