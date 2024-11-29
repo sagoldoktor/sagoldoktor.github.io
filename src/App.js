@@ -15,7 +15,7 @@ function App() {
     addMessage('user', userInput);
 
     // Show a loading indicator
-    // addMessage('bot', 'Araştırıyorum...');
+    addMessage('bot', '');
 
     try {
       const response = await fetch('https://vbejdnajxe.execute-api.us-east-2.amazonaws.com/prod/chat', {
