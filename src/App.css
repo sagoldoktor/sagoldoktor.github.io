@@ -22,8 +22,8 @@ body {
 .chat-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 1000px; /* Adjust the max-width as desired */
+  width: 90%;
+  max-width: None; /* Adjust the max-width as desired */
   height: 100%;
   background-color: #ffffff;
   padding: 0px 0;
@@ -104,23 +104,24 @@ html {
   background-color: #0056b3;
 }
 
-/* Adjust message content max-width for larger screens */
-
-@media (min-width: 600px) {
-  .message-content {
-    max-width: 70%;
+@media (min-width: 1200px) {
+  .chat-container {
+    width: 80%; /* Or any value that looks good */
   }
 }
 
-/* Adjust chat container padding for smaller screens */
-
-@media (max-width: 600px) {
+/* For medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
   .chat-container {
-    box-shadow: none;
+    width: 90%;
   }
+}
 
-  .chat-window {
-    padding: 10px;
+/* For small screens */
+@media (max-width: 767px) {
+  .chat-container {
+    width: 100%;
+    margin: 0;
   }
 }
 
