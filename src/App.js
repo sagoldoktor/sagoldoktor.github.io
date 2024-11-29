@@ -45,9 +45,11 @@ function App() {
 
   return (
     <div className="app">
+    <div className="chat-container">
     <ChatWindow messages={messages} />
     <Input onSend={handleSend} />
     <ScrollToTop />
+    </div>
     </div>
   );
 }
