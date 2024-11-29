@@ -18,7 +18,7 @@ function Input({ onSend }) {
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Type your message..."
+        placeholder="Mesajınızı girin..."
       />
       <button type="submit">Send</button>
     </form>
