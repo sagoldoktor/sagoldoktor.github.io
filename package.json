@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build --cname www.sagol.xyz",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "add-domain": "echo www.sagol.xyz > build/CNAME"
