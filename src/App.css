@@ -129,10 +129,14 @@ html {
   top: 0;
   z-index: 1000; /* Ensure it stays above other content */
   width: 100%;
-  background-color: #007bff;
+  background: -webkit-linear-gradient(90deg, #90E0EF 0%, #00B4D8 50%, #0077B6 100%);
+  background: -moz-linear-gradient(90deg, #90E0EF 0%, #00B4D8 50%, #0077B6 100%);
+  background: -o-linear-gradient(90deg, #90E0EF 0%, #00B4D8 50%, #0077B6 100%);
+  background: linear-gradient(90deg, #90E0EF 0%, #00B4D8 50%, #0077B6 100%);
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .chat-header h1 {
