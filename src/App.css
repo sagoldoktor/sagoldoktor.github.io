@@ -44,7 +44,7 @@ html {
 
 .message {
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .message.user {
@@ -121,4 +121,16 @@ html {
   .chat-window {
     padding: 10px;
   }
+}
+
+.chat-header {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: 1.5em;
 }
