@@ -1,39 +1,72 @@
 /* src/App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+}
+
 .app {
-  max-width: 600px;
-  margin: 0 auto;
-  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .chat-window {
-  border: 1px solid #ccc;
-  padding: 10px;
-  height: 400px;
-  overflow-y: scroll;
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .message {
-  margin: 10px 0;
+  display: flex;
+  margin-bottom: 15px;
 }
 
 .message.user {
-  text-align: right;
+  justify-content: flex-end;
 }
 
-.message.bot {
-  text-align: left;
+.message.assistant {
+  justify-content: flex-start;
+}
+
+.message-content {
+  max-width: 60%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #000;
+}
+
+.message.user .message-content {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.message.assistant .message-content {
+  background-color: #e5e5ea;
+  color: #000;
 }
 
 .input-form {
   display: flex;
-  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
 }
 
 .input-form input {
   flex: 1;
   padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  margin-right: 10px;
 }
 
 .input-form button {
-  padding: 10px;
-}
+  padding: 10px 20px;
+  border: none;
+  backg
