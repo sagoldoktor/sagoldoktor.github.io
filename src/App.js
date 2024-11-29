@@ -51,6 +51,7 @@ function App() {
         </header>
         <ChatWindow messages={messages} />
         <Input onSend={handleSend} />
+        <ScrollToTop />
       </div>
     </div>
   );
