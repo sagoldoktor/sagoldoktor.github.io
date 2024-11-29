@@ -22,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "add-domain": "echo www.sagol.xyz > build/CNAME",
   },
   "eslintConfig": {
     "extends": [
