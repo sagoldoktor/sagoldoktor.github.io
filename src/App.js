@@ -1,8 +1,9 @@
 // src/App.js
 import React, { useState } from 'react';
-import ChatWindow from './ChatWindow';
-import Input from './Input';
-import './App.css';
+import { ChatInterface } from 'llmui';
+import { ThemeProvider } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material';
+import theme from './theme'; // We'll create a theme in Step 3
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -54,11 +55,23 @@ function App() {
     }
   };
 
+  // Convert your messages to the format expected by llmui
+  const formattedMessages = messages.map((msg) => ({
+    role: msg.sender === 'user' ? 'user' : 'assistant',
+    content: msg.text,
+  }));
+
   return (
-    <div className="app">
-      <ChatWindow messages={messages} />
-      <Input onSend={handleSend} />
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <ChatInterface
+        messages={formattedMessages}
+        onSendMessage={handleSend}
+        disableSend={false}
+        placeholder="Mesajınızı yazın..."
+        user={{ id: 'user' }}
+      />
+    </ThemeProvider>
   );
 }
 
