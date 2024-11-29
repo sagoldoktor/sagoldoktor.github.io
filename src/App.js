@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import ChatWindow from './ChatWindow';
 import Input from './Input';
 import './App.css';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -44,8 +45,9 @@ function App() {
 
   return (
     <div className="app">
-      <ChatWindow messages={messages} />
-      <Input onSend={handleSend} />
+    <ChatWindow messages={messages} />
+    <Input onSend={handleSend} />
+    <ScrollToTop />
     </div>
   );
 }
