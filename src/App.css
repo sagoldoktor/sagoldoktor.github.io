@@ -27,6 +27,7 @@ body {
   height: 100%;
   background-color: #ffffff;
   padding: 0px 0;
+  margin: 0 auto; /* Center the container */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -124,13 +125,17 @@ html {
 }
 
 .chat-header {
-  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+  width: 100%;
   background-color: #007bff;
   color: #fff;
+  padding: 20px 0;
   text-align: center;
 }
 
 .chat-header h1 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
