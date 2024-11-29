@@ -22,8 +22,8 @@ body {
 .chat-container {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  max-width: 800px; /* Adjust the max-width as desired */
+  width: 100%;
+  max-width: 1000px; /* Adjust the max-width as desired */
   height: 100%;
   background-color: #ffffff;
   padding: 20px 0;
