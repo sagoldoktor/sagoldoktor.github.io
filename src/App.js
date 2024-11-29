@@ -1,7 +1,8 @@
+// src/App.js
 import React, { useState } from 'react';
-import { Box, CssBaseline, AppBar, Toolbar, Typography } from '@mui/material';
 import ChatWindow from './ChatWindow';
 import Input from './Input';
+import './App.css';
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -12,7 +13,7 @@ function App() {
 
   const handleSend = async (userInput) => {
     addMessage('user', userInput);
-    addMessage('bot', 'Thinking...');
+    addMessage('assistant', 'Araştırıyorum...');
 
     try {
       const response = await fetch('https://vbejdnajxe.execute-api.us-east-2.amazonaws.com/prod/chat', {
@@ -22,11 +23,11 @@ function App() {
       });
 
       const data = await response.json();
-      const botReply = data.choices[0].message.content;
+      const assistantReply = data.choices[0].message.content;
 
       setMessages((msgs) =>
         msgs.map((msg, index) =>
-          index === msgs.length - 1 ? { ...msg, text: botReply } : msg
+          index === msgs.length - 1 ? { ...msg, text: assistantReply } : msg
         )
       );
     } catch (error) {
@@ -34,7 +35,7 @@ function App() {
       setMessages((msgs) =>
         msgs.map((msg, index) =>
           index === msgs.length - 1
-            ? { ...msg, text: 'Özür dilerim, hata oldu...' }
+            ? { ...msg, text: 'Üzgünüm, hata oldu...' }
             : msg
         )
       );
@@ -42,19 +43,12 @@ function App() {
   };
 
   return (
-    <>
-      <CssBaseline />
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6">Sağol Doktor</Typography>
-        </Toolbar>
-      </AppBar>
-      <Box display="flex" flexDirection="column" height="calc(100vh - 64px)">
-        <ChatWindow messages={messages} />
-        <Input onSend={handleSend} />
-      </Box>
-    </>
+    <div className="app">
+      <ChatWindow messages={messages} />
+      <Input onSend={handleSend} />
+    </div>
   );
 }
 
 export default App;
+
