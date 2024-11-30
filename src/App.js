@@ -80,18 +80,18 @@ function App() {
     <div className="app">
       <header className="chat-header">
         <h1>Sağol Doktor</h1>
-        <button className="clear-chat-button" onClick={handleClearChat}>
-          Sohbeti Temizle
-        </button>
       </header>
       <div className="chat-container">
         <ChatWindow messages={messages} />
         <Input onSend={handleSend} />
+        {/* Move the Clear Chat button here */}
+        <button className="clear-chat-button" onClick={handleClearChat}>
+          Sohbeti Temizle
+        </button>
         <ScrollToTop />
       </div>
     </div>
   );
-}
 
 export default App;
 
