@@ -68,6 +68,15 @@ function App() {
     }
   };
 
+    // Define the handleClearChat function
+  const handleClearChat = () => {
+    // Clear messages from state
+    setMessages([]);
+
+    // Optional: Clear messages from localStorage if you're using it
+    localStorage.removeItem(`chatHistory_${userId}`);
+  };
+
   return (
     <div className="app">
       <header className="chat-header">
