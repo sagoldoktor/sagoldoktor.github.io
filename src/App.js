@@ -83,8 +83,11 @@ function App() {
       </header>
       <div className="chat-container">
         <ChatWindow messages={messages} />
-        <Input onSend={handleSend} />
-        {/* Move the Clear Chat button here */}
+        {/* Input field container */}
+        <div className="input-container">
+          <Input onSend={handleSend} />
+        </div>
+        {/* Clear Chat button */}
         <button className="clear-chat-button" onClick={handleClearChat}>
           Sohbeti Temizle
         </button>
@@ -92,6 +95,7 @@ function App() {
       </div>
     </div>
   );
+}
 
 export default App;
 
