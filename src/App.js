@@ -1,10 +1,11 @@
 // src/App.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ChatWindow from './ChatWindow';
 import Input from './Input';
 import './App.css';
 import ScrollToTop from './ScrollToTop';
 import { v4 as uuidv4 } from 'uuid';
+import { Button } from '@mui/material';
 
 const getUserId = () => {
   let userId = localStorage.getItem('userId');
@@ -71,6 +72,9 @@ function App() {
     <div className="app">
       <header className="chat-header">
         <h1>Sağol Doktor</h1>
+        <button className="clear-chat-button" onClick={handleClearChat}>
+          Sohbeti Temizle
+        </button>
       </header>
       <div className="chat-container">
         <ChatWindow messages={messages} />
