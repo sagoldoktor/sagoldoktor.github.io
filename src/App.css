@@ -24,6 +24,7 @@ body {
 /* New styles for the chat container */
 
 .chat-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 1000px;
@@ -190,14 +191,19 @@ html {
 
 /* Style for the clear chat button */
 .clear-chat-button {
-  background-color: #f44336; /* Red color to indicate a destructive action */
+  position: absolute;
+  bottom: 0; /* Position at the bottom */
+  left: 0;   /* Position at the left */
+  margin: 10px; /* Optional: Add some margin */
+  background-color: #f44336;
   color: white;
   border: none;
   padding: 8px 16px;
-  margin-left: auto;
   cursor: pointer;
   border-radius: 4px;
   font-size: 14px;
+  /* Adjust z-index if necessary to ensure it's above other elements */
+  z-index: 1;
 }
 
 .clear-chat-button:hover {
