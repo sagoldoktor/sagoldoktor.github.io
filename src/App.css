@@ -5,8 +5,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(180deg, #CBF6FF 0%, #ccffe0 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .app {
