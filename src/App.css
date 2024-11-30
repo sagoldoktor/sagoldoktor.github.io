@@ -138,15 +138,14 @@ html {
   z-index: 1000; /* Ensure it stays above other content */
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: rgba(50,50,50,0.9);
   padding: 20px 0;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .chat-header h1 {
   margin: 0;
-  font-size: 1.8em;
+  font-size: 1em;
 }
 
 .message {
