@@ -1,7 +1,8 @@
 /* src/App.css */
 
-/* Existing styles */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
+/* Existing styles */
 body {
   margin: 0;
   padding: 0;
@@ -28,10 +29,10 @@ body {
   width: 1000px;
   max-width: None; /* Adjust the max-width as desired */
   height: 100%;
-  background-color: #ffffff;
-  padding: 0px 0;
-  margin: 0 auto; /* Center the container */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 html {
@@ -42,13 +43,14 @@ html {
   flex: 1;
   padding: 20px;
   overflow-y: auto;
+  background-color: transparent;
 }
 
 /* Existing message styles */
 
 .message {
   display: flex;
-  margin-bottom: 5px;
+  margin: 10px 0;
 }
 
 .message.user {
@@ -60,11 +62,11 @@ html {
 }
 
 .message-content {
-  max-width: 60%;
-  padding: 5px 5px;
-  border-radius: 8px;
-  background-color: #fff;
-  color: #000;
+  max-width: 70%;
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 1em;
+  line-height: 1.5;
 }
 
 .message.user .message-content {
@@ -73,7 +75,7 @@ html {
 }
 
 .message.assistant .message-content {
-  background-color: #e5e5ea;
+  background-color: rgba(255, 255, 255, 0.9);
   color: #000;
 }
 
@@ -81,26 +83,28 @@ html {
 
 .input-form {
   display: flex;
-  padding: 10px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.85);
   border-top: 1px solid #ccc;
 }
 
 .input-form input {
   flex: 1;
-  padding: 10px;
+  padding: 15px;
   border: none;
-  border-radius: 20px;
-  background-color: #f0f0f0;
+  border-radius: 25px;
   margin-right: 10px;
+  font-size: 1em;
 }
 
 .input-form button {
-  padding: 10px 20px;
+  padding: 15px 25px;
   border: none;
   background-color: #007bff;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 25px;
   cursor: pointer;
+  font-size: 1em;
 }
 
 .input-form button:hover {
@@ -146,4 +150,44 @@ html {
 .chat-header h1 {
   margin: 0;
   font-size: 1.8em;
+}
+
+.message {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .chat-container {
+    width: 95%;
+  }
+
+  .message-content {
+    max-width: 85%;
+    padding: 12px;
+  }
+
+  .input-form {
+    padding: 10px;
+  }
+
+  .input-form input,
+  .input-form button {
+    padding: 12px;
+    font-size: 0.9em;
+  }
+
+  .chat-header h1 {
+    font-size: 1.5em;
+  }
 }
