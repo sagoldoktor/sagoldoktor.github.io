@@ -4,10 +4,34 @@ import ChatWindow from './ChatWindow';
 import Input from './Input';
 import './App.css';
 import ScrollToTop from './ScrollToTop';
+import { v4 as uuidv4 } from 'uuid';
+
+const getUserId = () => {
+  let userId = localStorage.getItem('userId');
+  if (!userId) {
+    userId = uuidv4();
+    localStorage.setItem('userId', userId);
+  }
+  return userId;
+};
 
 function App() {
+  const userId = getUserId();
   const [messages, setMessages] = useState([]);
 
+  // Load chat history on component mount
+  useEffect(() => {
+    const savedMessages = localStorage.getItem(`chatHistory_${userId}`);
+    if (savedMessages) {
+      setMessages(JSON.parse(savedMessages));
+    }
+  }, [userId]);
+
+  // Save chat history whenever messages change
+  useEffect(() => {
+    localStorage.setItem(`chatHistory_${userId}`, JSON.stringify(messages));
+  }, [messages, userId]);
+  
   const addMessage = (sender, text) => {
     setMessages((msgs) => [...msgs, { sender, text }]);
   };
