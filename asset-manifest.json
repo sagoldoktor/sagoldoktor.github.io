@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/sagoldoktor.github.io/static/css/main.6c802a3a.css",
+    "main.css": "/sagoldoktor.github.io/static/css/main.7784d080.css",
     "main.js": "/sagoldoktor.github.io/static/js/main.6760b828.js",
     "index.html": "/sagoldoktor.github.io/index.html",
-    "main.6c802a3a.css.map": "/sagoldoktor.github.io/static/css/main.6c802a3a.css.map",
+    "main.7784d080.css.map": "/sagoldoktor.github.io/static/css/main.7784d080.css.map",
     "main.6760b828.js.map": "/sagoldoktor.github.io/static/js/main.6760b828.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c802a3a.css",
+    "static/css/main.7784d080.css",
     "static/js/main.6760b828.js"
   ]
 }
